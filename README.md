@@ -1,6 +1,6 @@
 # DeliPop: sitio web
 
-Landing page de DeliPop, pop para tu evento en Uruguay (carrito para eventos, pop a granel y pops individuales). Es un sitio estático (HTML, CSS y JS, sin build), listo para publicar en GitHub Pages.
+Landing page de DeliPop, pop para tu empresa o evento en Uruguay (carrito para eventos, pop a granel y pops individuales). Es un sitio estático (HTML, CSS y JS, sin build), listo para publicar en GitHub Pages.
 
 ## Estructura
 
