@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>DeliPop · Pop para tu evento en Uruguay</title>
+  <meta name="description" content="Pop para tu evento en Uruguay: llevamos el carrito de pop a tu evento, o te preparamos pop a granel y en bolsitas individuales. Pedí tu presupuesto en un minuto.">
+  <meta name="theme-color" content="#0a0a0a">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="DeliPop · Pop para tu evento en Uruguay">
+  <meta property="og:description" content="Carrito de pop para tu evento, pop a granel y pops individuales. Pedí tu presupuesto en un minuto.">
+  <meta property="og:image" content="assets/img/logo-black.png">
+  <meta property="og:locale" content="es_UY">
+
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/fonts/ZingRustBase.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css?v=19">
+</head>
+<body>
+
+  <!-- Símbolos SVG reutilizables: pop vectorial, íconos de servicios y redes -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="kernel-a" viewBox="-14 -14 148 148">
+        <g style="fill:var(--kb,#fff);stroke:var(--kb,#fff)" stroke-width="26">
+          <circle cx="60" cy="70" r="30"/><circle cx="36" cy="50" r="18"/><circle cx="58" cy="34" r="19"/>
+          <circle cx="84" cy="46" r="17"/><circle cx="40" cy="84" r="16"/><circle cx="82" cy="84" r="17"/>
+        </g>
+        <g fill="#000" stroke="#000" stroke-width="10">
+          <circle cx="60" cy="70" r="30"/><circle cx="36" cy="50" r="18"/><circle cx="58" cy="34" r="19"/>
+          <circle cx="84" cy="46" r="17"/><circle cx="40" cy="84" r="16"/><circle cx="82" cy="84" r="17"/>
+        </g>
+        <g fill="#fff">
+          <circle cx="60" cy="70" r="30"/><circle cx="36" cy="50" r="18"/><circle cx="58" cy="34" r="19"/>
+          <circle cx="84" cy="46" r="17"/><circle cx="40" cy="84" r="16"/><circle cx="82" cy="84" r="17"/>
+        </g>
+        <g fill="none" stroke="#000" stroke-width="5.5" stroke-linecap="round">
+          <path d="M46 74q2 15 19 17"/><path d="M50 40q3-8 12-8"/><path d="M76 52q4-6 10-5"/>
+        </g>
+      </symbol>
+      <symbol id="kernel-b" viewBox="-14 -14 148 148">
+        <g style="fill:var(--kb,#fff);stroke:var(--kb,#fff)" stroke-width="26">
+          <circle cx="64" cy="64" r="32"/><circle cx="30" cy="62" r="15"/><circle cx="38" cy="36" r="17"/>
+          <circle cx="66" cy="26" r="15"/><circle cx="92" cy="40" r="14"/><circle cx="36" cy="88" r="14"/>
+        </g>
+        <g fill="#000" stroke="#000" stroke-width="10">
+          <circle cx="64" cy="64" r="32"/><circle cx="30" cy="62" r="15"/><circle cx="38" cy="36" r="17"/>
+          <circle cx="66" cy="26" r="15"/><circle cx="92" cy="40" r="14"/><circle cx="36" cy="88" r="14"/>
+        </g>
+        <g fill="#fff">
+          <circle cx="64" cy="64" r="32"/><circle cx="30" cy="62" r="15"/><circle cx="38" cy="36" r="17"/>
+          <circle cx="66" cy="26" r="15"/><circle cx="92" cy="40" r="14"/><circle cx="36" cy="88" r="14"/>
+        </g>
+        <g fill="none" stroke="#000" stroke-width="5.5" stroke-linecap="round">
+          <path d="M50 70q4 18 24 18"/><path d="M34 46q2-8 10-10"/><path d="M38 64q-5 4-6 10"/>
+        </g>
+      </symbol>
+      <symbol id="pop-box" viewBox="0 0 220 230">
+        <path d="M34 84h152l-20 138H54Z" fill="#fff" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+        <path d="M34 84h152l-20 138H54Z" fill="#fff" stroke="#000" stroke-width="7" stroke-linejoin="round"/>
+        <path d="M64 84h30l-4 138H74ZM126 84h30l-10 138h-16Z" fill="#000"/>
+        <path d="M34 84h152l-20 138H54Z" fill="none" stroke="#000" stroke-width="7" stroke-linejoin="round"/>
+        <rect x="24" y="70" width="172" height="22" rx="6" fill="#fff" stroke="#000" stroke-width="7"/>
+        <circle cx="110" cy="153" r="45" fill="#fff" stroke="#000" stroke-width="6"/>
+        <image href="assets/img/logo-black.png" x="74" y="125" width="72" height="59"/>
+        <use href="#kernel-b" x="18" y="22" width="70" height="70"/>
+        <use href="#kernel-a" x="66" y="4" width="78" height="78"/>
+        <use href="#kernel-b" x="128" y="18" width="72" height="72"/>
+        <use href="#kernel-a" x="44" y="40" width="54" height="54"/>
+        <use href="#kernel-b" x="118" y="44" width="54" height="54"/>
+      </symbol>
+      <symbol id="spark" viewBox="0 0 100 100">
+        <path d="M50 4 C55 38 62 45 96 50 C62 55 55 62 50 96 C45 62 38 55 4 50 C38 45 45 38 50 4Z"/>
+      </symbol>
+
+      <!-- Íconos de servicios (trazo = currentColor) -->
+      <symbol id="ico-cart" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 14 12 6h24l4 8Z"/><rect x="11" y="14" width="26" height="15" rx="1.5"/>
+          <circle cx="18" cy="24" r="2.8"/><circle cx="24" cy="21.5" r="3"/><circle cx="30" cy="24" r="2.8"/>
+          <path d="M13 29h22v8H13z"/><circle cx="17" cy="41" r="3"/><circle cx="31" cy="41" r="3"/><path d="M37 33h4v-6"/>
+        </g>
+      </symbol>
+      <symbol id="ico-bulk" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 19h28l-3.5 24h-21Z"/><path d="M19.5 19l1 24M28.5 19l-1 24"/>
+          <circle cx="15" cy="15" r="4"/><circle cx="22" cy="12" r="5"/><circle cx="30" cy="12.5" r="4.5"/><circle cx="35" cy="16" r="3"/>
+          <circle cx="19" cy="6" r="2.5"/><circle cx="28" cy="5" r="2.5"/>
+        </g>
+      </symbol>
+      <symbol id="ico-bags" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 27h12l-1.6 14H4.6Z"/><path d="M9 27v14"/><circle cx="6.5" cy="24" r="2.6"/><circle cx="11.5" cy="23.5" r="2.8"/>
+          <path d="M18 21h12l-1.6 20h-8.8Z"/><path d="M24 21v20"/><circle cx="21.5" cy="18" r="2.8"/><circle cx="26.5" cy="17.5" r="3"/>
+          <path d="M33 27h12l-1.6 14h-8.8Z"/><path d="M39 27v14"/><circle cx="36.5" cy="24" r="2.6"/><circle cx="41.5" cy="23.5" r="2.8"/>
+        </g>
+      </symbol>
+      <symbol id="ico-help" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 8h30a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H23l-9 7v-7H9a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4Z"/>
+          <path d="M19.5 17a4.5 4.5 0 1 1 6.6 4c-1.5.8-2.1 1.7-2.1 3.2"/>
+        </g>
+        <circle cx="24" cy="28.6" r="1.6" fill="currentColor"/>
+      </symbol>
+
+      <symbol id="ico-wa" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/>
+      </symbol>
+      <symbol id="ico-ig" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/></g>
+        <circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/>
+      </symbol>
+      <symbol id="ico-mail" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></g>
+      </symbol>
+      <symbol id="ico-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="ico-check" viewBox="0 0 24 24">
+        <path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <a class="skip" href="#contenido">Saltar al contenido</a>
+
+  <!-- ============ HEADER ============ -->
+  <div id="top"></div>
+  <header class="header">
+    <div class="wrap header__inner">
+      <a class="header__logo" href="#top" aria-label="DeliPop, inicio">
+        <img src="assets/img/logo-black.png" alt="DeliPop" width="890" height="731">
+      </a>
+      <nav class="nav" id="nav" aria-label="Principal">
+        <a href="#nosotros">Quiénes somos</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#preguntas">Preguntas</a>
+        <a class="btn btn--dark btn--sm nav__cta" href="#pedido">Pedí tu presupuesto</a>
+      </nav>
+      <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="contenido">
+
+    <!-- ============ HERO: los 4 servicios en el primer pantallazo ============ -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Pop para tu evento</p>
+          <h1 class="display hero__title"><span class="sr-only">¿</span><span class="inv" aria-hidden="true">?</span>Cómo querés<br>tu <span class="hl">pop</span>?</h1>
+          <p class="lead">
+            Llevamos el carrito a tu evento o te preparamos pop listo para compartir.
+            Elegí una opción y pedí tu presupuesto en un minuto.
+          </p>
+
+          <nav class="svc" aria-label="Elegí un servicio">
+            <a class="svc__card svc__card--main" href="#pedido" data-service="evento">
+              <span class="svc__icon"><svg><use href="#ico-cart"/></svg></span>
+              <span class="svc__text"><strong>Pop en tu evento</strong><small>Llevamos el carrito y lo preparamos ahí.</small></span>
+              <svg class="svc__arrow"><use href="#ico-arrow"/></svg>
+            </a>
+            <a class="svc__card" href="#pedido" data-service="granel">
+              <span class="svc__icon"><svg><use href="#ico-bulk"/></svg></span>
+              <span class="svc__text"><strong>Pop a granel</strong><small>Bolsas grandes para compartir.</small></span>
+              <svg class="svc__arrow"><use href="#ico-arrow"/></svg>
+            </a>
+            <a class="svc__card" href="#pedido" data-service="individual">
+              <span class="svc__icon"><svg><use href="#ico-bags"/></svg></span>
+              <span class="svc__text"><strong>Pops individuales</strong><small>Bolsitas listas para repartir.</small></span>
+              <svg class="svc__arrow"><use href="#ico-arrow"/></svg>
+            </a>
+            <a class="svc__card svc__card--alt" data-link="advice" href="#pedido" target="_blank" rel="noopener">
+              <span class="svc__icon"><svg><use href="#ico-help"/></svg></span>
+              <span class="svc__text"><strong>No sé, necesito asesoramiento</strong><small>Te asesoramos por WhatsApp.</small></span>
+              <svg class="svc__arrow"><use href="#ico-wa"/></svg>
+            </a>
+          </nav>
+
+        </div>
+
+        <div class="hero__stage" id="stage" data-pop aria-hidden="true">
+          <div class="stage__glow"></div>
+          <img class="stage__char" src="assets/img/personaje.webp" alt="" width="566" height="1100" fetchpriority="high">
+          <svg class="float k1"><use href="#kernel-a"/></svg>
+          <svg class="float k2"><use href="#kernel-b"/></svg>
+          <svg class="float k3"><use href="#kernel-a"/></svg>
+          <svg class="float k4"><use href="#kernel-b"/></svg>
+          <svg class="float s1 spark spark--w"><use href="#spark"/></svg>
+          <svg class="float s2 spark spark--w"><use href="#spark"/></svg>
+          <span class="stage__hint">Tocá para hacer pop</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MARQUESINA ============ -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Eventos corporativos</span><svg><use href="#kernel-a"/></svg>
+        <span>Fiestas de fin de año</span><svg><use href="#kernel-b"/></svg>
+        <span>Lanzamientos</span><svg><use href="#kernel-a"/></svg>
+        <span>Activaciones de marca</span><svg><use href="#kernel-b"/></svg>
+        <span>Cine en la oficina</span><svg><use href="#kernel-a"/></svg>
+        <span>Eventos corporativos</span><svg><use href="#kernel-a"/></svg>
+        <span>Fiestas de fin de año</span><svg><use href="#kernel-b"/></svg>
+        <span>Lanzamientos</span><svg><use href="#kernel-a"/></svg>
+        <span>Activaciones de marca</span><svg><use href="#kernel-b"/></svg>
+        <span>Cine en la oficina</span><svg><use href="#kernel-a"/></svg>
+      </div>
+    </div>
+
+    <!-- ============ QUIÉNES SOMOS / QUÉ HACEMOS ============ -->
+    <section class="section" id="nosotros">
+      <div class="wrap">
+        <div class="section__head section__head--row">
+          <div>
+            <p class="eyebrow reveal">Quiénes somos</p>
+            <h2 class="display h2 reveal">Hacemos pop para tu evento</h2>
+          </div>
+          <p class="section__intro reveal">
+            Somos DeliPop, una marca uruguaya de pop. Llevamos el snack más rico de cualquier encuentro
+            a los eventos, oficinas y clientes de tu empresa.
+          </p>
+        </div>
+
+        <div class="offer">
+          <article class="offer__card reveal">
+            <span class="offer__icon"><svg><use href="#ico-cart"/></svg></span>
+            <h3>Pop en tu evento</h3>
+            <p>Llevamos nuestro carrito, hacemos pop en el momento y lo servimos. Tu empresa contrata el servicio y tus invitados lo disfrutan sin costo.</p>
+            <p class="offer__tags">Activaciones · Lanzamientos · Ferias · Fiestas</p>
+            <a class="offer__cta" href="#pedido" data-service="evento">Pedir este servicio <svg class="i"><use href="#ico-arrow"/></svg></a>
+          </article>
+          <article class="offer__card reveal">
+            <span class="offer__icon"><svg><use href="#ico-bulk"/></svg></span>
+            <h3>Pop a granel</h3>
+            <p>Grandes cantidades de pop a granel, pesado por kilo. Para compartir en la oficina, en reuniones o en tu casa.</p>
+            <p class="offer__tags">Oficinas · Reuniones · Casa</p>
+            <a class="offer__cta" href="#pedido" data-service="granel">Pedir este servicio <svg class="i"><use href="#ico-arrow"/></svg></a>
+          </article>
+          <article class="offer__card reveal">
+            <span class="offer__icon"><svg><use href="#ico-bags"/></svg></span>
+            <h3>Pops individuales</h3>
+            <p>Bolsitas individuales listas para repartir, una por persona. Prácticas, prolijas y fáciles de entregar.</p>
+            <p class="offer__tags">Regalos · Kits de bienvenida</p>
+            <a class="offer__cta" href="#pedido" data-service="individual">Pedir este servicio <svg class="i"><use href="#ico-arrow"/></svg></a>
+          </article>
+        </div>
+
+        <div class="custom reveal">
+          <svg class="custom__k" aria-hidden="true"><use href="#kernel-a"/></svg>
+          <div>
+            <h3>¿Querés que tenga el sello de tu empresa?</h3>
+            <p>Bolsas con tu marca y el carrito de pop vestido con el logo de tu empresa: cada porción también comunica.</p>
+          </div>
+          <a class="btn btn--light" href="#pedido" data-personalize>Pedí tu presupuesto <svg class="i"><use href="#ico-arrow"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERÍA ============ -->
+    <section class="gallery" id="fotos" aria-labelledby="fotos-title">
+      <div class="wrap gallery__head">
+        <div>
+          <p class="eyebrow reveal">Eventos reales</p>
+          <h2 class="display h2 reveal" id="fotos-title">Nuestro pop en acción</h2>
+        </div>
+        <div class="gallery__nav">
+          <button class="gallery__btn" type="button" data-dir="-1" aria-label="Foto anterior"><svg class="i"><use href="#ico-arrow"/></svg></button>
+          <button class="gallery__btn" type="button" data-dir="1" aria-label="Foto siguiente"><svg class="i"><use href="#ico-arrow"/></svg></button>
+        </div>
+      </div>
+      <ul class="gallery__track" id="gallery" tabindex="0" aria-label="Fotos de eventos">
+          <li class="gallery__item gallery__item--wide">
+            <video src="assets/photos/00-carrito-en-accion.mp4" poster="assets/photos/00-carrito-en-accion.webp" muted loop playsinline preload="none" aria-label="Video: el carrito de pop en una exposición"></video>
+            <span class="gallery__cap">El carrito en acción</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/03-carrito-aire-libre.webp" alt="Eventos al aire libre" loading="lazy" decoding="async">
+            <span class="gallery__cap">Eventos al aire libre</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/06-vaso-logo.webp" alt="Vasos con tu marca" loading="lazy" decoding="async">
+            <span class="gallery__cap">Vasos con tu marca</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/07-bolsa-marca.webp" alt="Pops individuales con tu marca" loading="lazy" decoding="async">
+            <span class="gallery__cap">Pops individuales con tu marca</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/11-compartir.webp" alt="Pop a granel" loading="lazy" decoding="async">
+            <span class="gallery__cap">Pop a granel</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/08-invitados.webp" alt="Invitados felices" loading="lazy" decoding="async">
+            <span class="gallery__cap">Invitados felices</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/05-carrito-expo.webp" alt="En ferias y exposiciones" loading="lazy" decoding="async">
+            <span class="gallery__cap">En ferias y exposiciones</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/02-cajita-logo.webp" alt="Cajitas con el logo de tu empresa" loading="lazy" decoding="async">
+            <span class="gallery__cap">Cajitas con el logo de tu empresa</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/04-bolsa-personalizada.webp" alt="Bolsas personalizadas" loading="lazy" decoding="async">
+            <span class="gallery__cap">Bolsas personalizadas</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/12-recien-hecho.webp" alt="Pop a granel" loading="lazy" decoding="async">
+            <span class="gallery__cap">Pop a granel</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/10-vaso-marca.webp" alt="Tu logo en cada porción" loading="lazy" decoding="async">
+            <span class="gallery__cap">Tu logo en cada porción</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/09-carrito-oficina.webp" alt="En la oficina o en tu stand" loading="lazy" decoding="async">
+            <span class="gallery__cap">En la oficina o en tu stand</span>
+          </li>
+          <li class="gallery__item">
+            <img src="assets/photos/01-carrito-cx-day.webp" alt="Carrito personalizado con la marca del evento" loading="lazy" decoding="async">
+            <span class="gallery__cap">Carrito personalizado con la marca del evento</span>
+          </li>
+      </ul>
+    </section>
+
+    <!-- ============ CÓMO FUNCIONA ============ -->
+    <section class="section section--dark" id="como-funciona">
+      <div class="wrap steps">
+        <div class="steps__art reveal">
+          <img src="assets/img/manos.webp" alt="Ilustración: una mano entrega un pop a otra" width="1100" height="1043" loading="lazy">
+        </div>
+        <div class="steps__copy">
+          <p class="eyebrow eyebrow--light reveal">Cómo funciona</p>
+          <h2 class="display h2 reveal">Pedir es así de simple</h2>
+          <ol class="steps__list">
+            <li class="reveal">
+              <span class="steps__n">01</span>
+              <div><h3>Elegí tu servicio</h3><p>Pop en tu evento, a granel o individual. Si no sabés cuál te conviene, te asesoramos por WhatsApp.</p></div>
+            </li>
+            <li class="reveal">
+              <span class="steps__n">02</span>
+              <div><h3>Completá el pedido</h3><p>Un formulario corto: fecha tentativa, lugar y cantidad de personas. Cuantas más preguntas respondas, antes te pasamos el presupuesto.</p></div>
+            </li>
+            <li class="reveal">
+              <span class="steps__n">03</span>
+              <div><h3>Recibí tu propuesta</h3><p>Te escribimos por WhatsApp o correo con un presupuesto a medida.</p></div>
+            </li>
+            <li class="reveal">
+              <span class="steps__n">04</span>
+              <div><h3>Nosotros nos ocupamos del pop</h3><p>Coordinamos los detalles y vos solo disfrutás.</p></div>
+            </li>
+          </ol>
+          <a class="btn btn--light btn--lg reveal" href="#pedido">
+            Empezar mi pedido <svg class="i"><use href="#ico-arrow"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMULARIO DE PEDIDO ============ -->
+    <section class="section section--order" id="pedido">
+      <div class="wrap">
+        <div class="order">
+          <div class="order__copy">
+            <div class="order__sticky">
+            <p class="eyebrow eyebrow--light reveal">Tu pedido</p>
+            <h2 class="display h2 reveal">Pedí tu presupuesto</h2>
+            <p class="order__lead reveal">
+              Te lleva un minuto. Con estos datos te armamos una propuesta a medida
+              y te respondemos por WhatsApp o correo.
+            </p>
+            <ul class="order__checks reveal">
+              <li><svg class="i"><use href="#ico-check"/></svg> Sin compromiso</li>
+              <li><svg class="i"><use href="#ico-check"/></svg> Solo 3 datos obligatorios</li>
+              <li><svg class="i"><use href="#ico-check"/></svg> Cuantos más datos, antes tu presupuesto</li>
+            </ul>
+            <div class="order__alt reveal">
+              <p>¿Preferís hablar directo?</p>
+              <a class="btn btn--light" data-link="whatsapp" href="#pedido" target="_blank" rel="noopener">
+                <svg class="i"><use href="#ico-wa"/></svg> Escribinos por WhatsApp
+              </a>
+              <a class="order__mail" data-link="email" data-needs="email" href="#pedido"><svg class="i"><use href="#ico-mail"/></svg> <span data-text="email"></span></a>
+            </div>
+            </div>
+            <div class="order__fx" data-pop aria-hidden="true">
+              <span class="fx__hint">Tocá para hacer pop</span>
+              <svg class="fx__float" style="--x:6%;--y:8%;--s:70px;animation-delay:-1s"><use href="#kernel-a"/></svg>
+              <svg class="fx__float" style="--x:78%;--y:4%;--s:54px;animation-delay:-3s"><use href="#kernel-b"/></svg>
+              <svg class="fx__float" style="--x:84%;--y:40%;--s:62px;animation-delay:-2s"><use href="#kernel-a"/></svg>
+              <svg class="fx__float" style="--x:2%;--y:46%;--s:46px;animation-delay:-4s"><use href="#kernel-b"/></svg>
+              <svg class="fx__spark spark spark--w" style="--x:30%;--y:14%;--s:26px"><use href="#spark"/></svg>
+              <svg class="fx__spark spark spark--w" style="--x:66%;--y:26%;--s:18px;animation-delay:-1.2s"><use href="#spark"/></svg>
+              <svg class="fx__spark spark spark--w" style="--x:16%;--y:30%;--s:14px;animation-delay:-2.1s"><use href="#spark"/></svg>
+              <svg class="fx__spark spark spark--w" style="--x:92%;--y:22%;--s:16px;animation-delay:-.6s"><use href="#spark"/></svg>
+              <div class="fx__fountain">
+              <svg class="fx__popper" style="--dx:-120px;--h:300px;--r:260deg;--t:2.8s;animation-delay:0.0s;width:48px;height:48px"><use href="#kernel-a"/></svg>
+              <svg class="fx__popper" style="--dx:90px;--h:340px;--r:-220deg;--t:3.1s;animation-delay:0.5s;width:42px;height:42px"><use href="#kernel-b"/></svg>
+              <svg class="fx__popper" style="--dx:-40px;--h:380px;--r:180deg;--t:3.4s;animation-delay:1.1s;width:54px;height:54px"><use href="#kernel-b"/></svg>
+              <svg class="fx__popper" style="--dx:140px;--h:260px;--r:300deg;--t:2.6s;animation-delay:1.6s;width:38px;height:38px"><use href="#kernel-a"/></svg>
+              <svg class="fx__popper" style="--dx:20px;--h:420px;--r:-260deg;--t:3.6s;animation-delay:2.0s;width:46px;height:46px"><use href="#kernel-a"/></svg>
+              <svg class="fx__popper" style="--dx:-160px;--h:230px;--r:-180deg;--t:2.5s;animation-delay:2.4s;width:36px;height:36px"><use href="#kernel-b"/></svg>
+              <svg class="fx__popper" style="--dx:60px;--h:300px;--r:220deg;--t:2.9s;animation-delay:2.9s;width:50px;height:50px"><use href="#kernel-a"/></svg>
+              <svg class="fx__popper" style="--dx:-80px;--h:360px;--r:-300deg;--t:3.3s;animation-delay:3.3s;width:40px;height:40px"><use href="#kernel-b"/></svg>
+                <svg class="fx__box"><use href="#pop-box"/></svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="quote-wrap">
+            <form class="quote" id="quote" novalidate>
+              <input type="hidden" name="_subject" value="Nuevo pedido desde la web de DeliPop">
+
+              <!-- 1. Servicio -->
+              <fieldset class="block" id="servicio-field">
+                <legend class="block__title"><span>1</span> ¿Qué servicio te interesa? *</legend>
+                <div class="opts">
+                  <label class="opt">
+                    <input type="radio" name="servicio" value="evento" required>
+                    <span class="opt__box"><svg><use href="#ico-cart"/></svg><span>Pop en tu evento</span></span>
+                  </label>
+                  <label class="opt">
+                    <input type="radio" name="servicio" value="granel">
+                    <span class="opt__box"><svg><use href="#ico-bulk"/></svg><span>Pop a granel</span></span>
+                  </label>
+                  <label class="opt">
+                    <input type="radio" name="servicio" value="individual">
+                    <span class="opt__box"><svg><use href="#ico-bags"/></svg><span>Pops individuales</span></span>
+                  </label>
+                  <a class="opt opt--wa" data-link="advice" href="#pedido" target="_blank" rel="noopener">
+                    <span class="opt__box"><svg><use href="#ico-help"/></svg><span>No sé, necesito asesoramiento<small><svg class="i"><use href="#ico-wa"/></svg> Por WhatsApp</small></span></span>
+                  </a>
+                </div>
+                <p class="field__error" data-error-for="servicio">Elegí una opción para seguir.</p>
+              </fieldset>
+
+              <!-- 2. Datos -->
+              <fieldset class="block">
+                <legend class="block__title"><span>2</span> Tus datos</legend>
+                <div class="field-row">
+                  <label class="field">
+                    <span>Empresa *</span>
+                    <input name="empresa" type="text" autocomplete="organization" required placeholder="Ej: Acme S.A.">
+                    <em class="field__error" data-error-for="empresa">Contanos de qué empresa nos escribís.</em>
+                  </label>
+                  <label class="field">
+                    <span>Persona encargada *</span>
+                    <input name="encargado" type="text" autocomplete="name" required placeholder="Nombre y apellido">
+                    <em class="field__error" data-error-for="encargado">¿Con quién hablamos?</em>
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- 3. Pedido -->
+              <fieldset class="block">
+                <legend class="block__title"><span>3</span> Sobre el pedido</legend>
+                <p class="tip"><svg class="spark" width="14" height="14"><use href="#spark"/></svg> Es opcional, pero cuantas más preguntas respondas, más rápido y preciso va a ser tu presupuesto.</p>
+                <div class="field-row">
+                  <label class="field">
+                    <span>Fecha tentativa</span>
+                    <input name="fecha" type="date">
+                  </label>
+                  <label class="field">
+                    <span>Ciudad o departamento</span>
+                    <input name="lugar" type="text" placeholder="Ej: Montevideo">
+                  </label>
+                </div>
+
+                <div class="field">
+                  <span id="lbl-personas">Cantidad de personas estimada</span>
+                  <div class="pills" role="radiogroup" aria-labelledby="lbl-personas">
+                    <label class="pill"><input type="radio" name="personas" value="Menos de 100"><span>Menos de 100</span></label>
+                    <label class="pill"><input type="radio" name="personas" value="100 a 300"><span>100 a 300</span></label>
+                    <label class="pill"><input type="radio" name="personas" value="Más de 300"><span>Más de 300</span></label>
+                    <label class="pill"><input type="radio" name="personas" value="No sé"><span>No sé</span></label>
+                  </div>
+                </div>
+
+                <div class="field" data-show-for="evento">
+                  <span id="lbl-duracion">Duración estimada del evento</span>
+                  <div class="pills" role="radiogroup" aria-labelledby="lbl-duracion">
+                    <label class="pill"><input type="radio" name="duracion" value="Hasta 1 hora"><span>Hasta 1 hora</span></label>
+                    <label class="pill"><input type="radio" name="duracion" value="1 a 3 horas"><span>1 a 3 horas</span></label>
+                    <label class="pill"><input type="radio" name="duracion" value="Más de 3 horas"><span>Más de 3 horas</span></label>
+                    <label class="pill"><input type="radio" name="duracion" value="A definir"><span>A definir</span></label>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <span id="lbl-personalizar">¿Te interesa personalizar la experiencia?</span>
+                  <small class="field__hint" id="hint-personalizar">Bolsas con tu marca y el carrito de pop vestido con el logo de tu empresa.</small>
+                  <div class="pills" role="radiogroup" aria-labelledby="lbl-personalizar" aria-describedby="hint-personalizar">
+                    <label class="pill"><input type="radio" name="personalizar" value="Sí"><span>Sí</span></label>
+                    <label class="pill"><input type="radio" name="personalizar" value="No"><span>No</span></label>
+                  </div>
+                </div>
+
+                <label class="field">
+                  <span>Otras cosas que debamos tener en cuenta</span>
+                  <textarea name="otros" rows="3" placeholder="Horario, si es al aire libre, ideas para personalizar…"></textarea>
+                </label>
+              </fieldset>
+
+              <div class="quote__actions">
+                <button class="btn btn--dark btn--lg btn--block quote__submit" type="submit" data-channel="whatsapp">
+                  <svg class="i"><use href="#ico-wa"/></svg> Enviar pedido por WhatsApp
+                </button>
+                <button class="btn btn--outline btn--block" type="submit" data-channel="email">
+                  <svg class="i"><use href="#ico-mail"/></svg> Enviar pedido por mail
+                </button>
+              </div>
+              <p class="quote__note">Se abre WhatsApp o tu correo con el pedido ya escrito: solo tocá enviar.</p>
+            </form>
+
+            <div class="thanks" id="thanks" hidden tabindex="-1">
+              <svg class="thanks__k" aria-hidden="true"><use href="#kernel-a"/></svg>
+              <h3 class="display"><span class="sr-only">¡</span><span class="inv" aria-hidden="true">!</span>Gracias!</h3>
+              <p id="thanks-text">Recibimos tu pedido. Te vamos a escribir a la brevedad.</p>
+              <a class="btn btn--dark btn--lg" id="thanks-retry" href="#pedido" target="_blank" rel="noopener"></a>
+              <button class="quote__reset" type="button" id="thanks-reset">Hacer otro pedido</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PREGUNTAS ============ -->
+    <section class="section" id="preguntas">
+      <div class="wrap faq">
+        <div class="faq__head">
+          <p class="eyebrow reveal">Preguntas frecuentes</p>
+          <h2 class="display h2 reveal">Lo que suelen preguntarnos</h2>
+          <p class="section__intro reveal">¿Tenés otra duda? <a class="link" data-link="whatsapp" href="#pedido" target="_blank" rel="noopener">Escribinos</a> y te respondemos.</p>
+        </div>
+        <div class="faq__list">
+          <details class="reveal" open>
+            <summary>¿Qué servicio me conviene?</summary>
+            <p>Si querés que el pop sea parte de la experiencia, con el carrito y el aroma en el lugar, elegí <strong>Pop en tu evento</strong>. Si lo van a servir ustedes, <strong>Pop a granel</strong>. Si necesitás repartir una porción por persona, <strong>Pops individuales</strong>. Y si no lo tenés claro, <a class="link" data-link="advice" href="#pedido" target="_blank" rel="noopener">escribinos por WhatsApp</a> y te asesoramos.</p>
+          </details>
+          <details class="reveal">
+            <summary>En los eventos, ¿quién paga el pop?</summary>
+            <p>Tu empresa contrata el servicio completo. Los invitados reciben su pop sin costo: no hay caja ni cobro en el carrito.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Para cuántas personas pueden hacer pop?</summary>
+            <p>Armamos cada propuesta según la cantidad de personas y, en los eventos, la duración. Pasanos esos datos y te contamos cómo lo resolvemos.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Se puede personalizar?</summary>
+            <p>Sí. Hacemos bolsas con tu marca y vestimos el carrito de pop con el logo de tu empresa. Marcá que te interesa en el pedido y lo coordinamos.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Qué necesita el carrito en el lugar?</summary>
+            <p>Un espacio para ubicarlo y acceso a un tomacorriente. Si tenés dudas sobre el lugar, lo coordinamos antes del evento.</p>
+          </details>
+          <details class="reveal">
+            <summary>¿Con cuánta anticipación conviene pedir?</summary>
+            <p>Cuanto antes, mejor: así aseguramos tu fecha. Igual escribinos aunque falte poco, siempre intentamos hacerle lugar a tu pedido.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REDES ============ -->
+    <section class="social" id="redes">
+      <div class="wrap social__inner">
+        <svg class="social__k social__k--1" aria-hidden="true"><use href="#kernel-b"/></svg>
+        <svg class="social__k social__k--2" aria-hidden="true"><use href="#kernel-a"/></svg>
+        <p class="eyebrow reveal">Seguinos</p>
+        <a class="social__handle display reveal" data-link="instagram" data-text="instagram" href="#redes" target="_blank" rel="noopener">@delipopuyoficial</a>
+        <p class="social__text reveal">Mirá nuestro pop en acción y los eventos que ya pasaron por el carrito.</p>
+        <a class="btn btn--dark btn--lg reveal" data-link="instagram" href="#redes" target="_blank" rel="noopener">
+          <svg class="i"><use href="#ico-ig"/></svg> Seguinos en Instagram
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <div class="footer__brand">
+        <img src="assets/img/logo-white.png" alt="DeliPop" width="890" height="732" loading="lazy">
+        <p>Pop para tu evento en Uruguay.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Secciones">
+        <a href="#nosotros">Quiénes somos</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#pedido">Pedí tu presupuesto</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <div class="footer__contact">
+        <a data-link="whatsapp" href="#pedido" target="_blank" rel="noopener"><svg class="i"><use href="#ico-wa"/></svg> WhatsApp</a>
+        <a data-link="email" data-needs="email" href="#pedido"><svg class="i"><use href="#ico-mail"/></svg> <span data-text="email"></span></a>
+        <a data-link="instagram" href="#redes" target="_blank" rel="noopener"><svg class="i"><use href="#ico-ig"/></svg> Instagram</a>
+      </div>
+    </div>
+    <div class="wrap footer__bottom">
+      <span>© <span id="year">2026</span> DeliPop®. Marca registrada.</span>
+      <a href="#top">Volver arriba ↑</a>
+    </div>
+  </footer>
+
+  <!-- Botón flotante de WhatsApp -->
+  <a class="fab" data-link="whatsapp" href="#pedido" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+    <svg><use href="#ico-wa"/></svg>
+  </a>
+
+  <script src="js/main.js?v=12"></script>
+</body>
+</html>

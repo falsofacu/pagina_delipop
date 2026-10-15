@@ -1,0 +1,7 @@
+.claude/
+Thumbs.db
+.DS_Store
+referencia-fotos.jpg
+# Originales (el sitio usa las versiones optimizadas de assets/)
+/Img/
+/assets/fonts/*.otf

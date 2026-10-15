@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="es-UY">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hacé tu pedido · DeliPop</title>
+  <meta name="description" content="Formulario de pedido de DeliPop: pop para tu evento, pop a granel y pops individuales.">
+  <!-- Página para clientes habituales: no aparece en buscadores -->
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#0a0a0a">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preload" href="../assets/fonts/ZingRustBase.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../css/styles.css?v=19">
+</head>
+<body class="solo">
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <symbol id="kernel-a" viewBox="-14 -14 148 148">
+        <g style="fill:var(--kb,#fff);stroke:var(--kb,#fff)" stroke-width="26">
+          <circle cx="60" cy="70" r="30"/><circle cx="36" cy="50" r="18"/><circle cx="58" cy="34" r="19"/>
+          <circle cx="84" cy="46" r="17"/><circle cx="40" cy="84" r="16"/><circle cx="82" cy="84" r="17"/>
+        </g>
+        <g fill="#000" stroke="#000" stroke-width="10">
+          <circle cx="60" cy="70" r="30"/><circle cx="36" cy="50" r="18"/><circle cx="58" cy="34" r="19"/>
+          <circle cx="84" cy="46" r="17"/><circle cx="40" cy="84" r="16"/><circle cx="82" cy="84" r="17"/>
+        </g>
+        <g fill="#fff">
+          <circle cx="60" cy="70" r="30"/><circle cx="36" cy="50" r="18"/><circle cx="58" cy="34" r="19"/>
+          <circle cx="84" cy="46" r="17"/><circle cx="40" cy="84" r="16"/><circle cx="82" cy="84" r="17"/>
+        </g>
+        <g fill="none" stroke="#000" stroke-width="5.5" stroke-linecap="round">
+          <path d="M46 74q2 15 19 17"/><path d="M50 40q3-8 12-8"/><path d="M76 52q4-6 10-5"/>
+        </g>
+      </symbol>
+      <symbol id="kernel-b" viewBox="-14 -14 148 148">
+        <g style="fill:var(--kb,#fff);stroke:var(--kb,#fff)" stroke-width="26">
+          <circle cx="64" cy="64" r="32"/><circle cx="30" cy="62" r="15"/><circle cx="38" cy="36" r="17"/>
+          <circle cx="66" cy="26" r="15"/><circle cx="92" cy="40" r="14"/><circle cx="36" cy="88" r="14"/>
+        </g>
+        <g fill="#000" stroke="#000" stroke-width="10">
+          <circle cx="64" cy="64" r="32"/><circle cx="30" cy="62" r="15"/><circle cx="38" cy="36" r="17"/>
+          <circle cx="66" cy="26" r="15"/><circle cx="92" cy="40" r="14"/><circle cx="36" cy="88" r="14"/>
+        </g>
+        <g fill="#fff">
+          <circle cx="64" cy="64" r="32"/><circle cx="30" cy="62" r="15"/><circle cx="38" cy="36" r="17"/>
+          <circle cx="66" cy="26" r="15"/><circle cx="92" cy="40" r="14"/><circle cx="36" cy="88" r="14"/>
+        </g>
+        <g fill="none" stroke="#000" stroke-width="5.5" stroke-linecap="round">
+          <path d="M50 70q4 18 24 18"/><path d="M34 46q2-8 10-10"/><path d="M38 64q-5 4-6 10"/>
+        </g>
+      </symbol>
+      <symbol id="pop-box" viewBox="0 0 220 230">
+        <path d="M34 84h152l-20 138H54Z" fill="#fff" stroke="#fff" stroke-width="20" stroke-linejoin="round"/>
+        <path d="M34 84h152l-20 138H54Z" fill="#fff" stroke="#000" stroke-width="7" stroke-linejoin="round"/>
+        <path d="M64 84h30l-4 138H74ZM126 84h30l-10 138h-16Z" fill="#000"/>
+        <path d="M34 84h152l-20 138H54Z" fill="none" stroke="#000" stroke-width="7" stroke-linejoin="round"/>
+        <rect x="24" y="70" width="172" height="22" rx="6" fill="#fff" stroke="#000" stroke-width="7"/>
+        <circle cx="110" cy="153" r="45" fill="#fff" stroke="#000" stroke-width="6"/>
+        <image href="../assets/img/logo-black.png" x="74" y="125" width="72" height="59"/>
+        <use href="#kernel-b" x="18" y="22" width="70" height="70"/>
+        <use href="#kernel-a" x="66" y="4" width="78" height="78"/>
+        <use href="#kernel-b" x="128" y="18" width="72" height="72"/>
+        <use href="#kernel-a" x="44" y="40" width="54" height="54"/>
+        <use href="#kernel-b" x="118" y="44" width="54" height="54"/>
+      </symbol>
+      <symbol id="spark" viewBox="0 0 100 100">
+        <path d="M50 4 C55 38 62 45 96 50 C62 55 55 62 50 96 C45 62 38 55 4 50 C38 45 45 38 50 4Z"/>
+      </symbol>
+
+      <!-- Íconos de servicios (trazo = currentColor) -->
+      <symbol id="ico-cart" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M8 14 12 6h24l4 8Z"/><rect x="11" y="14" width="26" height="15" rx="1.5"/>
+          <circle cx="18" cy="24" r="2.8"/><circle cx="24" cy="21.5" r="3"/><circle cx="30" cy="24" r="2.8"/>
+          <path d="M13 29h22v8H13z"/><circle cx="17" cy="41" r="3"/><circle cx="31" cy="41" r="3"/><path d="M37 33h4v-6"/>
+        </g>
+      </symbol>
+      <symbol id="ico-bulk" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M10 19h28l-3.5 24h-21Z"/><path d="M19.5 19l1 24M28.5 19l-1 24"/>
+          <circle cx="15" cy="15" r="4"/><circle cx="22" cy="12" r="5"/><circle cx="30" cy="12.5" r="4.5"/><circle cx="35" cy="16" r="3"/>
+          <circle cx="19" cy="6" r="2.5"/><circle cx="28" cy="5" r="2.5"/>
+        </g>
+      </symbol>
+      <symbol id="ico-bags" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M3 27h12l-1.6 14H4.6Z"/><path d="M9 27v14"/><circle cx="6.5" cy="24" r="2.6"/><circle cx="11.5" cy="23.5" r="2.8"/>
+          <path d="M18 21h12l-1.6 20h-8.8Z"/><path d="M24 21v20"/><circle cx="21.5" cy="18" r="2.8"/><circle cx="26.5" cy="17.5" r="3"/>
+          <path d="M33 27h12l-1.6 14h-8.8Z"/><path d="M39 27v14"/><circle cx="36.5" cy="24" r="2.6"/><circle cx="41.5" cy="23.5" r="2.8"/>
+        </g>
+      </symbol>
+      <symbol id="ico-help" viewBox="0 0 48 48">
+        <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 8h30a4 4 0 0 1 4 4v18a4 4 0 0 1-4 4H23l-9 7v-7H9a4 4 0 0 1-4-4V12a4 4 0 0 1 4-4Z"/>
+          <path d="M19.5 17a4.5 4.5 0 1 1 6.6 4c-1.5.8-2.1 1.7-2.1 3.2"/>
+        </g>
+        <circle cx="24" cy="28.6" r="1.6" fill="currentColor"/>
+      </symbol>
+
+      <symbol id="ico-wa" viewBox="0 0 24 24">
+        <path fill="currentColor" d="M12 2a9.9 9.9 0 0 0-8.5 15l-1.4 5 5.2-1.4A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3.1.8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/>
+      </symbol>
+      <symbol id="ico-ig" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/></g>
+        <circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/>
+      </symbol>
+      <symbol id="ico-mail" viewBox="0 0 24 24">
+        <g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m4 7 8 6 8-6"/></g>
+      </symbol>
+      <symbol id="ico-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="ico-check" viewBox="0 0 24 24">
+        <path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+    </defs>
+  </svg>
+
+  <header class="solo__header">
+    <a href="../" aria-label="DeliPop, ir al sitio"><img src="../assets/img/logo-white.png" alt="DeliPop" width="890" height="732"></a>
+  </header>
+
+  <main class="solo__main" id="pedido">
+    <div class="solo__intro">
+      <svg class="solo__k solo__k--1" aria-hidden="true"><use href="#kernel-a"/></svg>
+      <svg class="solo__k solo__k--2" aria-hidden="true"><use href="#kernel-b"/></svg>
+      <p class="eyebrow">Tu pedido</p>
+      <h1 class="display">Hacé tu pedido</h1>
+      <p>Completalo en un minuto y envialo por WhatsApp o mail. Cuantas más preguntas respondas, antes te pasamos el presupuesto.</p>
+    </div>
+
+      <div class="quote-wrap">
+        <form class="quote" id="quote" novalidate>
+          <input type="hidden" name="_subject" value="Nuevo pedido desde la web de DeliPop">
+
+          <!-- 1. Servicio -->
+          <fieldset class="block" id="servicio-field">
+            <legend class="block__title"><span>1</span> ¿Qué servicio te interesa? *</legend>
+            <div class="opts">
+              <label class="opt">
+                <input type="radio" name="servicio" value="evento" required>
+                <span class="opt__box"><svg><use href="#ico-cart"/></svg><span>Pop en tu evento</span></span>
+              </label>
+              <label class="opt">
+                <input type="radio" name="servicio" value="granel">
+                <span class="opt__box"><svg><use href="#ico-bulk"/></svg><span>Pop a granel</span></span>
+              </label>
+              <label class="opt">
+                <input type="radio" name="servicio" value="individual">
+                <span class="opt__box"><svg><use href="#ico-bags"/></svg><span>Pops individuales</span></span>
+              </label>
+              <a class="opt opt--wa" data-link="advice" href="#pedido" target="_blank" rel="noopener">
+                <span class="opt__box"><svg><use href="#ico-help"/></svg><span>No sé, necesito asesoramiento<small><svg class="i"><use href="#ico-wa"/></svg> Por WhatsApp</small></span></span>
+              </a>
+            </div>
+            <p class="field__error" data-error-for="servicio">Elegí una opción para seguir.</p>
+          </fieldset>
+
+          <!-- 2. Datos -->
+          <fieldset class="block">
+            <legend class="block__title"><span>2</span> Tus datos</legend>
+            <div class="field-row">
+              <label class="field">
+                <span>Empresa *</span>
+                <input name="empresa" type="text" autocomplete="organization" required placeholder="Ej: Acme S.A.">
+                <em class="field__error" data-error-for="empresa">Contanos de qué empresa nos escribís.</em>
+              </label>
+              <label class="field">
+                <span>Persona encargada *</span>
+                <input name="encargado" type="text" autocomplete="name" required placeholder="Nombre y apellido">
+                <em class="field__error" data-error-for="encargado">¿Con quién hablamos?</em>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- 3. Pedido -->
+          <fieldset class="block">
+            <legend class="block__title"><span>3</span> Sobre el pedido</legend>
+            <p class="tip"><svg class="spark" width="14" height="14"><use href="#spark"/></svg> Es opcional, pero cuantas más preguntas respondas, más rápido y preciso va a ser tu presupuesto.</p>
+            <div class="field-row">
+              <label class="field">
+                <span>Fecha tentativa</span>
+                <input name="fecha" type="date">
+              </label>
+              <label class="field">
+                <span>Ciudad o departamento</span>
+                <input name="lugar" type="text" placeholder="Ej: Montevideo">
+              </label>
+            </div>
+
+            <div class="field">
+              <span id="lbl-personas">Cantidad de personas estimada</span>
+              <div class="pills" role="radiogroup" aria-labelledby="lbl-personas">
+                <label class="pill"><input type="radio" name="personas" value="Menos de 100"><span>Menos de 100</span></label>
+                <label class="pill"><input type="radio" name="personas" value="100 a 300"><span>100 a 300</span></label>
+                <label class="pill"><input type="radio" name="personas" value="Más de 300"><span>Más de 300</span></label>
+                <label class="pill"><input type="radio" name="personas" value="No sé"><span>No sé</span></label>
+              </div>
+            </div>
+
+            <div class="field" data-show-for="evento">
+              <span id="lbl-duracion">Duración estimada del evento</span>
+              <div class="pills" role="radiogroup" aria-labelledby="lbl-duracion">
+                <label class="pill"><input type="radio" name="duracion" value="Hasta 1 hora"><span>Hasta 1 hora</span></label>
+                <label class="pill"><input type="radio" name="duracion" value="1 a 3 horas"><span>1 a 3 horas</span></label>
+                <label class="pill"><input type="radio" name="duracion" value="Más de 3 horas"><span>Más de 3 horas</span></label>
+                <label class="pill"><input type="radio" name="duracion" value="A definir"><span>A definir</span></label>
+              </div>
+            </div>
+
+            <div class="field">
+              <span id="lbl-personalizar">¿Te interesa personalizar la experiencia?</span>
+              <small class="field__hint" id="hint-personalizar">Bolsas con tu marca y el carrito de pop vestido con el logo de tu empresa.</small>
+              <div class="pills" role="radiogroup" aria-labelledby="lbl-personalizar" aria-describedby="hint-personalizar">
+                <label class="pill"><input type="radio" name="personalizar" value="Sí"><span>Sí</span></label>
+                <label class="pill"><input type="radio" name="personalizar" value="No"><span>No</span></label>
+              </div>
+            </div>
+
+            <label class="field">
+              <span>Otras cosas que debamos tener en cuenta</span>
+              <textarea name="otros" rows="3" placeholder="Horario, si es al aire libre, ideas para personalizar…"></textarea>
+            </label>
+          </fieldset>
+
+          <div class="quote__actions">
+            <button class="btn btn--dark btn--lg btn--block quote__submit" type="submit" data-channel="whatsapp">
+              <svg class="i"><use href="#ico-wa"/></svg> Enviar pedido por WhatsApp
+            </button>
+            <button class="btn btn--outline btn--block" type="submit" data-channel="email">
+              <svg class="i"><use href="#ico-mail"/></svg> Enviar pedido por mail
+            </button>
+          </div>
+          <p class="quote__note">Se abre WhatsApp o tu correo con el pedido ya escrito: solo tocá enviar.</p>
+        </form>
+
+        <div class="thanks" id="thanks" hidden tabindex="-1">
+          <svg class="thanks__k" aria-hidden="true"><use href="#kernel-a"/></svg>
+          <h3 class="display"><span class="sr-only">¡</span><span class="inv" aria-hidden="true">!</span>Gracias!</h3>
+          <p id="thanks-text">Recibimos tu pedido. Te vamos a escribir a la brevedad.</p>
+          <a class="btn btn--dark btn--lg" id="thanks-retry" href="#pedido" target="_blank" rel="noopener"></a>
+          <button class="quote__reset" type="button" id="thanks-reset">Hacer otro pedido</button>
+        </div>
+      </div>
+  </main>
+
+  <footer class="solo__footer">
+    <a href="../">delipop · pop para tu evento</a>
+  </footer>
+
+  <script src="../js/main.js?v=12"></script>
+</body>
+</html>
