@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="preload" href="../assets/fonts/ZingRustBase.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../css/styles.css?v=19">
+  <link rel="stylesheet" href="../css/styles.css?v=22">
 </head>
 <body class="solo">
 
@@ -131,16 +131,19 @@
       <svg class="solo__k solo__k--2" aria-hidden="true"><use href="#kernel-b"/></svg>
       <p class="eyebrow">Tu pedido</p>
       <h1 class="display">Hacé tu pedido</h1>
-      <p>Completalo en un minuto y envialo por WhatsApp o mail. Cuantas más preguntas respondas, antes te pasamos el presupuesto.</p>
+      <p>Te vamos guiando de a una pregunta. Solo las 3 primeras son obligatorias.</p>
     </div>
 
       <div class="quote-wrap">
         <form class="quote" id="quote" novalidate>
-          <input type="hidden" name="_subject" value="Nuevo pedido desde la web de DeliPop">
+          <div class="progress">
+            <p class="progress__label" aria-live="polite">Pregunta <strong id="step-now">1</strong> de <strong id="step-total">9</strong></p>
+            <p class="progress__hint">Solo las 3 primeras son obligatorias</p>
+            <div class="progress__bar" aria-hidden="true"><span id="step-bar"></span></div>
+          </div>
 
-          <!-- 1. Servicio -->
-          <fieldset class="block" id="servicio-field">
-            <legend class="block__title"><span>1</span> ¿Qué servicio te interesa? *</legend>
+          <fieldset class="step" id="servicio-field" data-step>
+            <legend class="step__q"><span class="step__n">1</span> ¿Qué servicio te interesa? *</legend>
             <div class="opts">
               <label class="opt">
                 <input type="radio" name="servicio" value="evento" required>
@@ -161,40 +164,44 @@
             <p class="field__error" data-error-for="servicio">Elegí una opción para seguir.</p>
           </fieldset>
 
-          <!-- 2. Datos -->
-          <fieldset class="block">
-            <legend class="block__title"><span>2</span> Tus datos</legend>
-            <div class="field-row">
-              <label class="field">
-                <span>Empresa *</span>
-                <input name="empresa" type="text" autocomplete="organization" required placeholder="Ej: Acme S.A.">
-                <em class="field__error" data-error-for="empresa">Contanos de qué empresa nos escribís.</em>
-              </label>
-              <label class="field">
-                <span>Persona encargada *</span>
-                <input name="encargado" type="text" autocomplete="name" required placeholder="Nombre y apellido">
-                <em class="field__error" data-error-for="encargado">¿Con quién hablamos?</em>
-              </label>
-            </div>
-          </fieldset>
+          <div class="step" data-step data-required="empresa">
+            <label class="field">
+              <span class="step__q"><span class="step__n">2</span> Empresa *</span>
+              <input name="empresa" type="text" autocomplete="organization" required placeholder="Ej: Acme S.A.">
+              <em class="field__error" data-error-for="empresa">Contanos de qué empresa nos escribís.</em>
+            </label>
+            <button class="step__next btn btn--dark btn--sm" type="button">Siguiente</button>
+          </div>
 
-          <!-- 3. Pedido -->
-          <fieldset class="block">
-            <legend class="block__title"><span>3</span> Sobre el pedido</legend>
-            <p class="tip"><svg class="spark" width="14" height="14"><use href="#spark"/></svg> Es opcional, pero cuantas más preguntas respondas, más rápido y preciso va a ser tu presupuesto.</p>
-            <div class="field-row">
-              <label class="field">
-                <span>Fecha tentativa</span>
-                <input name="fecha" type="date">
-              </label>
-              <label class="field">
-                <span>Ciudad o departamento</span>
-                <input name="lugar" type="text" placeholder="Ej: Montevideo">
-              </label>
-            </div>
+          <div class="step" data-step data-required="encargado">
+            <label class="field">
+              <span class="step__q"><span class="step__n">3</span> Persona encargada *</span>
+              <input name="encargado" type="text" autocomplete="name" required placeholder="Nombre y apellido">
+              <em class="field__error" data-error-for="encargado">¿Con quién hablamos?</em>
+            </label>
+            <button class="step__next btn btn--dark btn--sm" type="button">Siguiente</button>
+          </div>
 
+          <div class="step" data-step>
+            <p class="tip"><svg class="spark" width="14" height="14"><use href="#spark"/></svg> Desde acá es opcional, pero cuantas más preguntas respondas, más rápido y preciso va a ser tu presupuesto.</p>
+            <label class="field">
+              <span class="step__q"><span class="step__n">4</span> Fecha tentativa</span>
+              <input name="fecha" type="date">
+            </label>
+            <button class="step__next btn btn--outline btn--sm" type="button">Omitir</button>
+          </div>
+
+          <div class="step" data-step>
+            <label class="field">
+              <span class="step__q"><span class="step__n">5</span> Ciudad o departamento</span>
+              <input name="lugar" type="text" placeholder="Ej: Montevideo">
+            </label>
+            <button class="step__next btn btn--outline btn--sm" type="button">Omitir</button>
+          </div>
+
+          <div class="step" data-step>
             <div class="field">
-              <span id="lbl-personas">Cantidad de personas estimada</span>
+              <span class="step__q" id="lbl-personas"><span class="step__n">6</span> Cantidad de personas estimada</span>
               <div class="pills" role="radiogroup" aria-labelledby="lbl-personas">
                 <label class="pill"><input type="radio" name="personas" value="Menos de 100"><span>Menos de 100</span></label>
                 <label class="pill"><input type="radio" name="personas" value="100 a 300"><span>100 a 300</span></label>
@@ -202,9 +209,12 @@
                 <label class="pill"><input type="radio" name="personas" value="No sé"><span>No sé</span></label>
               </div>
             </div>
+            <button class="step__next btn btn--outline btn--sm" type="button">Omitir</button>
+          </div>
 
-            <div class="field" data-show-for="evento">
-              <span id="lbl-duracion">Duración estimada del evento</span>
+          <div class="step" data-step data-show-for="evento">
+            <div class="field">
+              <span class="step__q" id="lbl-duracion"><span class="step__n">7</span> Duración estimada del evento</span>
               <div class="pills" role="radiogroup" aria-labelledby="lbl-duracion">
                 <label class="pill"><input type="radio" name="duracion" value="Hasta 1 hora"><span>Hasta 1 hora</span></label>
                 <label class="pill"><input type="radio" name="duracion" value="1 a 3 horas"><span>1 a 3 horas</span></label>
@@ -212,23 +222,29 @@
                 <label class="pill"><input type="radio" name="duracion" value="A definir"><span>A definir</span></label>
               </div>
             </div>
+            <button class="step__next btn btn--outline btn--sm" type="button">Omitir</button>
+          </div>
 
+          <div class="step" data-step>
             <div class="field">
-              <span id="lbl-personalizar">¿Te interesa personalizar la experiencia?</span>
+              <span class="step__q" id="lbl-personalizar"><span class="step__n">8</span> ¿Te interesa personalizar la experiencia?</span>
               <small class="field__hint" id="hint-personalizar">Bolsas con tu marca y el carrito de pop vestido con el logo de tu empresa.</small>
               <div class="pills" role="radiogroup" aria-labelledby="lbl-personalizar" aria-describedby="hint-personalizar">
                 <label class="pill"><input type="radio" name="personalizar" value="Sí"><span>Sí</span></label>
                 <label class="pill"><input type="radio" name="personalizar" value="No"><span>No</span></label>
               </div>
             </div>
+            <button class="step__next btn btn--outline btn--sm" type="button">Omitir</button>
+          </div>
 
+          <div class="step" data-step>
             <label class="field">
-              <span>Otras cosas que debamos tener en cuenta</span>
+              <span class="step__q"><span class="step__n">9</span> Otras cosas que debamos tener en cuenta</span>
               <textarea name="otros" rows="3" placeholder="Horario, si es al aire libre, ideas para personalizar…"></textarea>
             </label>
-          </fieldset>
+          </div>
 
-          <div class="quote__actions">
+          <div class="quote__actions" hidden>
             <button class="btn btn--dark btn--lg btn--block quote__submit" type="submit" data-channel="whatsapp">
               <svg class="i"><use href="#ico-wa"/></svg> Enviar pedido por WhatsApp
             </button>
@@ -236,7 +252,7 @@
               <svg class="i"><use href="#ico-mail"/></svg> Enviar pedido por mail
             </button>
           </div>
-          <p class="quote__note">Se abre WhatsApp o tu correo con el pedido ya escrito: solo tocá enviar.</p>
+          <p class="quote__note" hidden>Se abre WhatsApp o tu correo con el pedido ya escrito: solo tocá enviar.</p>
         </form>
 
         <div class="thanks" id="thanks" hidden tabindex="-1">
@@ -253,6 +269,6 @@
     <a href="../">delipop · pop para tu empresa o evento</a>
   </footer>
 
-  <script src="../js/main.js?v=12"></script>
+  <script src="../js/main.js?v=13"></script>
 </body>
 </html>

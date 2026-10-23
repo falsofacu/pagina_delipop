@@ -19,7 +19,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="preload" href="assets/fonts/ZingRustBase.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="css/styles.css?v=19">
+  <link rel="stylesheet" href="css/styles.css?v=22">
 </head>
 <body>
 
@@ -139,7 +139,6 @@
       <nav class="nav" id="nav" aria-label="Principal">
         <a href="#nosotros">Quiénes somos</a>
         <a href="#como-funciona">Cómo funciona</a>
-        <a href="#preguntas">Preguntas</a>
         <a class="btn btn--dark btn--sm nav__cta" href="#pedido">Pedí tu presupuesto</a>
       </nav>
       <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav">
@@ -155,7 +154,7 @@
       <div class="wrap hero__grid">
         <div class="hero__copy">
           <p class="eyebrow">Pop para tu empresa o evento</p>
-          <h1 class="display hero__title"><span class="sr-only">¿</span><span class="inv" aria-hidden="true">?</span>Cómo querés<br>tu <span class="hl">pop</span>?</h1>
+          <h1 class="display hero__title">De <span class="hl">pop</span> a una experiencia de marketing experiencial</h1>
           <p class="lead">
             Llevamos el carrito a tu evento o te preparamos pop listo para compartir.
             Elegí una opción y pedí tu presupuesto en un minuto.
@@ -167,15 +166,15 @@
               <span class="svc__text"><strong>Pop en tu evento</strong><small>Llevamos el carrito y lo preparamos ahí.</small></span>
               <svg class="svc__arrow"><use href="#ico-arrow"/></svg>
             </a>
-            <a class="svc__card" href="#pedido" data-service="granel">
+            <a class="svc__card" data-link="wa-granel" href="#pedido" target="_blank" rel="noopener">
               <span class="svc__icon"><svg><use href="#ico-bulk"/></svg></span>
               <span class="svc__text"><strong>Pop a granel</strong><small>Bolsas grandes para compartir.</small></span>
-              <svg class="svc__arrow"><use href="#ico-arrow"/></svg>
+              <svg class="svc__arrow"><use href="#ico-wa"/></svg>
             </a>
-            <a class="svc__card" href="#pedido" data-service="individual">
+            <a class="svc__card" data-link="wa-individual" href="#pedido" target="_blank" rel="noopener">
               <span class="svc__icon"><svg><use href="#ico-bags"/></svg></span>
               <span class="svc__text"><strong>Pops individuales</strong><small>Bolsitas listas para repartir.</small></span>
-              <svg class="svc__arrow"><use href="#ico-arrow"/></svg>
+              <svg class="svc__arrow"><use href="#ico-wa"/></svg>
             </a>
             <a class="svc__card svc__card--alt" data-link="advice" href="#pedido" target="_blank" rel="noopener">
               <span class="svc__icon"><svg><use href="#ico-help"/></svg></span>
@@ -207,27 +206,31 @@
         <span>Fiestas de fin de año</span><svg><use href="#kernel-b"/></svg>
         <span>Lanzamientos</span><svg><use href="#kernel-a"/></svg>
         <span>Activaciones de marca</span><svg><use href="#kernel-b"/></svg>
-        <span>Cine en la oficina</span><svg><use href="#kernel-a"/></svg>
         <span>Eventos corporativos</span><svg><use href="#kernel-a"/></svg>
         <span>Fiestas de fin de año</span><svg><use href="#kernel-b"/></svg>
         <span>Lanzamientos</span><svg><use href="#kernel-a"/></svg>
         <span>Activaciones de marca</span><svg><use href="#kernel-b"/></svg>
-        <span>Cine en la oficina</span><svg><use href="#kernel-a"/></svg>
       </div>
     </div>
 
     <!-- ============ QUIÉNES SOMOS / QUÉ HACEMOS ============ -->
     <section class="section" id="nosotros">
       <div class="wrap">
-        <div class="section__head section__head--row">
+        <div class="section__head section__head--row section__head--story">
           <div>
             <p class="eyebrow reveal">Quiénes somos</p>
             <h2 class="display h2 reveal">Hacemos pop para tu empresa o evento</h2>
           </div>
-          <p class="section__intro reveal">
-            Somos DeliPop, una marca uruguaya de pop. Llevamos el snack más rico de cualquier encuentro
-            a los eventos, oficinas y clientes de tu empresa.
-          </p>
+          <div class="story reveal">
+            <div class="story__scroll" id="story" tabindex="0" aria-label="Nuestra historia">
+              <p>DeliPop nació en 2021 como un emprendimiento gastronómico, con ganas de hacer algo diferente: llevar el pop a lugares cotidianos, más allá del cine.</p>
+              <p>A través de la experimentación, el contacto con los clientes y las ferias, fuimos transformando nuestro modelo de negocio hasta descubrir que el pop podía ser mucho más que un producto: una oportunidad para sorprender, generar interacción y crear momentos compartidos.</p>
+              <p>Hoy transformamos el popcorn en una herramienta de marketing experiencial, con propuestas en vivo que conectan a las marcas con las personas a través de los sentidos, la participación y la personalización.</p>
+              <p>Trabajamos en activaciones de marca y eventos corporativos e institucionales, cuidando cada detalle para crear experiencias que atraigan, inviten a participar y dejen un recuerdo.</p>
+              <p class="story__end">Porque creemos que las marcas no solo comunican lo que son. También lo transmiten a través de las experiencias que crean.</p>
+            </div>
+            <p class="story__hint" aria-hidden="true">Deslizá para leer más <svg class="i"><use href="#ico-arrow"/></svg></p>
+          </div>
         </div>
 
         <div class="offer">
@@ -243,14 +246,14 @@
             <h3>Pop a granel</h3>
             <p>Grandes cantidades de pop a granel, pesado por kilo. Para compartir en la oficina, en reuniones o en tu casa.</p>
             <p class="offer__tags">Oficinas · Reuniones · Casa</p>
-            <a class="offer__cta" href="#pedido" data-service="granel">Pedir este servicio <svg class="i"><use href="#ico-arrow"/></svg></a>
+            <a class="offer__cta" data-link="wa-granel" href="#pedido" target="_blank" rel="noopener"><svg class="i"><use href="#ico-wa"/></svg> Pedir por WhatsApp</a>
           </article>
           <article class="offer__card reveal">
             <span class="offer__icon"><svg><use href="#ico-bags"/></svg></span>
             <h3>Pops individuales</h3>
             <p>Bolsitas individuales listas para repartir, una por persona. Prácticas, prolijas y fáciles de entregar.</p>
             <p class="offer__tags">Regalos · Kits de bienvenida</p>
-            <a class="offer__cta" href="#pedido" data-service="individual">Pedir este servicio <svg class="i"><use href="#ico-arrow"/></svg></a>
+            <a class="offer__cta" data-link="wa-individual" href="#pedido" target="_blank" rel="noopener"><svg class="i"><use href="#ico-wa"/></svg> Pedir por WhatsApp</a>
           </article>
         </div>
 
@@ -270,7 +273,7 @@
       <div class="wrap gallery__head">
         <div>
           <p class="eyebrow reveal">Eventos reales</p>
-          <h2 class="display h2 reveal" id="fotos-title">Nuestro pop en acción</h2>
+          <h2 class="display h2 reveal" id="fotos-title">Nuestro servicio en acción</h2>
         </div>
         <div class="gallery__nav">
           <button class="gallery__btn" type="button" data-dir="-1" aria-label="Foto anterior"><svg class="i"><use href="#ico-arrow"/></svg></button>
@@ -418,11 +421,14 @@
 
           <div class="quote-wrap">
             <form class="quote" id="quote" novalidate>
-              <input type="hidden" name="_subject" value="Nuevo pedido desde la web de DeliPop">
+              <div class="progress">
+                <p class="progress__label" aria-live="polite">Pregunta <strong id="step-now">1</strong> de <strong id="step-total">9</strong></p>
+                <p class="progress__hint">Solo las 3 primeras son obligatorias</p>
+                <div class="progress__bar" aria-hidden="true"><span id="step-bar"></span></div>
+              </div>
 
-              <!-- 1. Servicio -->
-              <fieldset class="block" id="servicio-field">
-                <legend class="block__title"><span>1</span> ¿Qué servicio te interesa? *</legend>
+              <fieldset class="step" id="servicio-field" data-step>
+                <legend class="step__q"><span class="step__n">1</span> ¿Qué servicio te interesa? *</legend>
                 <div class="opts">
                   <label class="opt">
                     <input type="radio" name="servicio" value="evento" required>
@@ -443,40 +449,44 @@
                 <p class="field__error" data-error-for="servicio">Elegí una opción para seguir.</p>
               </fieldset>
 
-              <!-- 2. Datos -->
-              <fieldset class="block">
-                <legend class="block__title"><span>2</span> Tus datos</legend>
-                <div class="field-row">
-                  <label class="field">
-                    <span>Empresa *</span>
-                    <input name="empresa" type="text" autocomplete="organization" required placeholder="Ej: Acme S.A.">
-                    <em class="field__error" data-error-for="empresa">Contanos de qué empresa nos escribís.</em>
-                  </label>
-                  <label class="field">
-                    <span>Persona encargada *</span>
-                    <input name="encargado" type="text" autocomplete="name" required placeholder="Nombre y apellido">
-                    <em class="field__error" data-error-for="encargado">¿Con quién hablamos?</em>
-                  </label>
-                </div>
-              </fieldset>
+              <div class="step" data-step data-required="empresa">
+                <label class="field">
+                  <span class="step__q"><span class="step__n">2</span> Empresa *</span>
+                  <input name="empresa" type="text" autocomplete="organization" required placeholder="Ej: Acme S.A.">
+                  <em class="field__error" data-error-for="empresa">Contanos de qué empresa nos escribís.</em>
+                </label>
+                <button class="step__next btn btn--dark btn--sm" type="button">Siguiente</button>
+              </div>
 
-              <!-- 3. Pedido -->
-              <fieldset class="block">
-                <legend class="block__title"><span>3</span> Sobre el pedido</legend>
-                <p class="tip"><svg class="spark" width="14" height="14"><use href="#spark"/></svg> Es opcional, pero cuantas más preguntas respondas, más rápido y preciso va a ser tu presupuesto.</p>
-                <div class="field-row">
-                  <label class="field">
-                    <span>Fecha tentativa</span>
-                    <input name="fecha" type="date">
-                  </label>
-                  <label class="field">
-                    <span>Ciudad o departamento</span>
-                    <input name="lugar" type="text" placeholder="Ej: Montevideo">
-                  </label>
-                </div>
+              <div class="step" data-step data-required="encargado">
+                <label class="field">
+                  <span class="step__q"><span class="step__n">3</span> Persona encargada *</span>
+                  <input name="encargado" type="text" autocomplete="name" required placeholder="Nombre y apellido">
+                  <em class="field__error" data-error-for="encargado">¿Con quién hablamos?</em>
+                </label>
+                <button class="step__next btn btn--dark btn--sm" type="button">Siguiente</button>
+              </div>
 
+              <div class="step" data-step>
+                <p class="tip"><svg class="spark" width="14" height="14"><use href="#spark"/></svg> Desde acá es opcional, pero cuantas más preguntas respondas, más rápido y preciso va a ser tu presupuesto.</p>
+                <label class="field">
+                  <span class="step__q"><span class="step__n">4</span> Fecha tentativa</span>
+                  <input name="fecha" type="date">
+                </label>
+                <button class="step__next btn btn--outline btn--sm" type="button">Omitir</button>
+              </div>
+
+              <div class="step" data-step>
+                <label class="field">
+                  <span class="step__q"><span class="step__n">5</span> Ciudad o departamento</span>
+                  <input name="lugar" type="text" placeholder="Ej: Montevideo">
+                </label>
+                <button class="step__next btn btn--outline btn--sm" type="button">Omitir</button>
+              </div>
+
+              <div class="step" data-step>
                 <div class="field">
-                  <span id="lbl-personas">Cantidad de personas estimada</span>
+                  <span class="step__q" id="lbl-personas"><span class="step__n">6</span> Cantidad de personas estimada</span>
                   <div class="pills" role="radiogroup" aria-labelledby="lbl-personas">
                     <label class="pill"><input type="radio" name="personas" value="Menos de 100"><span>Menos de 100</span></label>
                     <label class="pill"><input type="radio" name="personas" value="100 a 300"><span>100 a 300</span></label>
@@ -484,9 +494,12 @@
                     <label class="pill"><input type="radio" name="personas" value="No sé"><span>No sé</span></label>
                   </div>
                 </div>
+                <button class="step__next btn btn--outline btn--sm" type="button">Omitir</button>
+              </div>
 
-                <div class="field" data-show-for="evento">
-                  <span id="lbl-duracion">Duración estimada del evento</span>
+              <div class="step" data-step data-show-for="evento">
+                <div class="field">
+                  <span class="step__q" id="lbl-duracion"><span class="step__n">7</span> Duración estimada del evento</span>
                   <div class="pills" role="radiogroup" aria-labelledby="lbl-duracion">
                     <label class="pill"><input type="radio" name="duracion" value="Hasta 1 hora"><span>Hasta 1 hora</span></label>
                     <label class="pill"><input type="radio" name="duracion" value="1 a 3 horas"><span>1 a 3 horas</span></label>
@@ -494,23 +507,29 @@
                     <label class="pill"><input type="radio" name="duracion" value="A definir"><span>A definir</span></label>
                   </div>
                 </div>
+                <button class="step__next btn btn--outline btn--sm" type="button">Omitir</button>
+              </div>
 
+              <div class="step" data-step>
                 <div class="field">
-                  <span id="lbl-personalizar">¿Te interesa personalizar la experiencia?</span>
+                  <span class="step__q" id="lbl-personalizar"><span class="step__n">8</span> ¿Te interesa personalizar la experiencia?</span>
                   <small class="field__hint" id="hint-personalizar">Bolsas con tu marca y el carrito de pop vestido con el logo de tu empresa.</small>
                   <div class="pills" role="radiogroup" aria-labelledby="lbl-personalizar" aria-describedby="hint-personalizar">
                     <label class="pill"><input type="radio" name="personalizar" value="Sí"><span>Sí</span></label>
                     <label class="pill"><input type="radio" name="personalizar" value="No"><span>No</span></label>
                   </div>
                 </div>
+                <button class="step__next btn btn--outline btn--sm" type="button">Omitir</button>
+              </div>
 
+              <div class="step" data-step>
                 <label class="field">
-                  <span>Otras cosas que debamos tener en cuenta</span>
+                  <span class="step__q"><span class="step__n">9</span> Otras cosas que debamos tener en cuenta</span>
                   <textarea name="otros" rows="3" placeholder="Horario, si es al aire libre, ideas para personalizar…"></textarea>
                 </label>
-              </fieldset>
+              </div>
 
-              <div class="quote__actions">
+              <div class="quote__actions" hidden>
                 <button class="btn btn--dark btn--lg btn--block quote__submit" type="submit" data-channel="whatsapp">
                   <svg class="i"><use href="#ico-wa"/></svg> Enviar pedido por WhatsApp
                 </button>
@@ -518,7 +537,7 @@
                   <svg class="i"><use href="#ico-mail"/></svg> Enviar pedido por mail
                 </button>
               </div>
-              <p class="quote__note">Se abre WhatsApp o tu correo con el pedido ya escrito: solo tocá enviar.</p>
+              <p class="quote__note" hidden>Se abre WhatsApp o tu correo con el pedido ya escrito: solo tocá enviar.</p>
             </form>
 
             <div class="thanks" id="thanks" hidden tabindex="-1">
@@ -529,43 +548,6 @@
               <button class="quote__reset" type="button" id="thanks-reset">Hacer otro pedido</button>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ PREGUNTAS ============ -->
-    <section class="section" id="preguntas">
-      <div class="wrap faq">
-        <div class="faq__head">
-          <p class="eyebrow reveal">Preguntas frecuentes</p>
-          <h2 class="display h2 reveal">Lo que suelen preguntarnos</h2>
-          <p class="section__intro reveal">¿Tenés otra duda? <a class="link" data-link="whatsapp" href="#pedido" target="_blank" rel="noopener">Escribinos</a> y te respondemos.</p>
-        </div>
-        <div class="faq__list">
-          <details class="reveal" open>
-            <summary>¿Qué servicio me conviene?</summary>
-            <p>Si querés que el pop sea parte de la experiencia, con el carrito y el aroma en el lugar, elegí <strong>Pop en tu evento</strong>. Si lo van a servir ustedes, <strong>Pop a granel</strong>. Si necesitás repartir una porción por persona, <strong>Pops individuales</strong>. Y si no lo tenés claro, <a class="link" data-link="advice" href="#pedido" target="_blank" rel="noopener">escribinos por WhatsApp</a> y te asesoramos.</p>
-          </details>
-          <details class="reveal">
-            <summary>En los eventos, ¿quién paga el pop?</summary>
-            <p>Tu empresa contrata el servicio completo. Los invitados reciben su pop sin costo: no hay caja ni cobro en el carrito.</p>
-          </details>
-          <details class="reveal">
-            <summary>¿Para cuántas personas pueden hacer pop?</summary>
-            <p>Armamos cada propuesta según la cantidad de personas y, en los eventos, la duración. Pasanos esos datos y te contamos cómo lo resolvemos.</p>
-          </details>
-          <details class="reveal">
-            <summary>¿Se puede personalizar?</summary>
-            <p>Sí. Hacemos bolsas con tu marca y vestimos el carrito de pop con el logo de tu empresa. Marcá que te interesa en el pedido y lo coordinamos.</p>
-          </details>
-          <details class="reveal">
-            <summary>¿Qué necesita el carrito en el lugar?</summary>
-            <p>Un espacio para ubicarlo y acceso a un tomacorriente. Si tenés dudas sobre el lugar, lo coordinamos antes del evento.</p>
-          </details>
-          <details class="reveal">
-            <summary>¿Con cuánta anticipación conviene pedir?</summary>
-            <p>Cuanto antes, mejor: así aseguramos tu fecha. Igual escribinos aunque falte poco, siempre intentamos hacerle lugar a tu pedido.</p>
-          </details>
         </div>
       </div>
     </section>
@@ -596,7 +578,6 @@
         <a href="#nosotros">Quiénes somos</a>
         <a href="#como-funciona">Cómo funciona</a>
         <a href="#pedido">Pedí tu presupuesto</a>
-        <a href="#preguntas">Preguntas</a>
       </nav>
       <div class="footer__contact">
         <a data-link="whatsapp" href="#pedido" target="_blank" rel="noopener"><svg class="i"><use href="#ico-wa"/></svg> WhatsApp</a>
@@ -615,6 +596,6 @@
     <svg><use href="#ico-wa"/></svg>
   </a>
 
-  <script src="js/main.js?v=12"></script>
+  <script src="js/main.js?v=13"></script>
 </body>
 </html>
