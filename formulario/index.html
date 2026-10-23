@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chivo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <link rel="preload" href="../assets/fonts/ZingRustBase.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="../css/styles.css?v=22">
+  <link rel="stylesheet" href="../css/styles.css?v=23">
 </head>
 <body class="solo">
 
@@ -149,14 +149,12 @@
                 <input type="radio" name="servicio" value="evento" required>
                 <span class="opt__box"><svg><use href="#ico-cart"/></svg><span>Pop en tu evento</span></span>
               </label>
-              <label class="opt">
-                <input type="radio" name="servicio" value="granel">
-                <span class="opt__box"><svg><use href="#ico-bulk"/></svg><span>Pop a granel</span></span>
-              </label>
-              <label class="opt">
-                <input type="radio" name="servicio" value="individual">
-                <span class="opt__box"><svg><use href="#ico-bags"/></svg><span>Pops individuales</span></span>
-              </label>
+              <a class="opt opt--wa" data-link="wa-granel" href="#pedido" target="_blank" rel="noopener">
+                <span class="opt__box"><svg><use href="#ico-bulk"/></svg><span>Pop a granel<small><svg class="i"><use href="#ico-wa"/></svg> Por WhatsApp</small></span></span>
+              </a>
+              <a class="opt opt--wa" data-link="wa-individual" href="#pedido" target="_blank" rel="noopener">
+                <span class="opt__box"><svg><use href="#ico-bags"/></svg><span>Pops individuales<small><svg class="i"><use href="#ico-wa"/></svg> Por WhatsApp</small></span></span>
+              </a>
               <a class="opt opt--wa" data-link="advice" href="#pedido" target="_blank" rel="noopener">
                 <span class="opt__box"><svg><use href="#ico-help"/></svg><span>No sé, necesito asesoramiento<small><svg class="i"><use href="#ico-wa"/></svg> Por WhatsApp</small></span></span>
               </a>
