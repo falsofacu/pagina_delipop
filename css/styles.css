@@ -266,6 +266,10 @@ h1, h2, h3, p { margin: 0; }
 
 /* ---------- Historia (Quiénes somos) ---------- */
 .section__head--story { align-items: start; }
+.section__head--story > div:first-child { container-type: inline-size; min-width: 0; }
+/* Siempre en dos líneas como máximo: el tamaño se ajusta al ancho de la columna */
+.story__title { font-size: min(clamp(2.6rem, 6vw, 5.2rem), 11cqi); }
+.story__title .nowrap { white-space: nowrap; }
 .story { position: relative; }
 .story__scroll {
   max-height: 300px; overflow-y: auto; padding-right: 18px;
